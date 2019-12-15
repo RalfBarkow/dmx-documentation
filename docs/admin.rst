@@ -8,7 +8,7 @@ DMX Admin Documentation
 The Settings File
 *****************
 
-The DMX settings file is located in ``conf/config.properties``.
+The DMX settings file is located in ``/etc/dmx/config.properties``.
 The settings are basically explained inline in the comments, too.
 
 The Webserver
@@ -244,7 +244,7 @@ Logging
 =======
 
 DMX comes with a separate configuration file for logging.
-It is called ``logging.properties`` and you can find it in the same ``conf`` folder as the configuration file.
+It is called ``logging.properties`` and you can find it in the same ``/etc/dmx/`` folder as the configuration file.
 You can adjust the path to your needs with the following setting:
 
 .. code:: bash
@@ -436,7 +436,7 @@ Java files                  ``/usr/share/dmx/``
 DMX database and file repo  ``/var/lib/dmx/``
 Log files                   ``/var/log/dmx/``
 Bundle cache                ``/var/cache/dmx/``
-Examples                    ``/usr/share/docs/dmx/``
+Examples                    ``/usr/share/doc/dmx/``
 Systemd unit file           ``/etc/systemd/system/dmx.service``
 ==========================  ===================================
 
