@@ -413,7 +413,7 @@ The web server handles SSL.
        </Location>
    </VirtualHost>
 
-Your ``conf/config.properties`` file would then look like this:
+Your ``/etc/dmx/config.properties`` file would then look like this:
 
 .. code:: bash
 
