@@ -633,7 +633,9 @@ You can :ref:`hide <user-hiding-items>` the topicmap topic from the map via the 
 Displaying Geodata
 ------------------
 
-DMX comes with built-in support for geodata.
+.. note:: As of DMX 5.0-beta-7 the geomap plugin has to be installed separately as described in our :ref:`Admin Documentation <admin-plugin-installation>`. Download it `here <https://download.dmx.systems/plugins/dmx-geomaps/>`_.
+
+DMX offers a plugin to support geodata.
 Every topic with an address can be shown on a geographical map.
 The so-called geomaps are a special type of topicmap in DMX.
 Geomaps are based on `openstreetmap.org <https://www.openstreetmap.org>`_.
@@ -1136,6 +1138,24 @@ Here is how creating a shared workspace works:
 * The user you shared your workspace with can now log in, select your collaborative workspace and add something, e.g. a note. This note is now accessible to all members of the workspace. It will appear on the selected topicmap, visible to all workspace members looking at the same topicmap.
 
 .. note:: You can create membership associations to every workspace that you have write permission in.
+
+.. _user-moving-objects-to-a-different-workspace:
+
+Moving objects to a different workspace
+=======================================
+
+As of DMX version 5.0-beta-7 it is possible to assign existing objects to a different workspace.
+For this, you must have write permission on both the selected object and the target workspace.
+
+An example use case: You have a contact, a "Person" object, in your private workspace that you want to share with some other user.
+
+Select the object and open the "Meta" tab in the :ref:`detail panel<user-the-detail-panel>`.
+Hover over the Workspace field with your mouse pointer and click the edit button.
+You can now select the target workspace from the drop-down menu and hit "Save".
+
+.. image:: _static/assign-to-different-ws.png
+
+.. note:: This only works for individual selected objects. Bulk operations are not yet supported.
 
 .. _user-modeling:
 

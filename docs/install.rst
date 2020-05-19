@@ -4,11 +4,11 @@
 Installation
 ############
 
-DMX is built on the Java Platform which can be installed on many operating systems.
+DMX is built on the Java Platform which can be installed on most operating systems.
 On this page we have covered how to run DMX on :ref:`Windows <installation-windows>`, :ref:`Mac OS <installation-macos>` and :ref:`Linux <installation-linux>`.
 
 DMX is a web application consisting of a client and a server.
-If you run DMX a web server is started (see Starting DMX) which makes the DMX web client accessible in your web browser (see Opening the Web Client).
+When you run DMX, a web server is started (see Starting DMX) making the DMX web client accessible in your web browser (see Opening the Web Client).
 
 .. _installation-windows:
 
@@ -20,14 +20,14 @@ Installing Java
 ===============
 
 DMX runs out of the box with Java versions 6 to 8.
-To run DMX we recommend you to download **Java 8**.
+To run DMX we recommend you use **Java 8**.
 If Java 8 is not already installed you can download it from the `AdoptOpenJDK <https://adoptopenjdk.net/>`_ or `Oracle's Java <https://java.com/en/download/>`_ website.
 Double-click the downloaded file and click through the installer.
 
 Downloading DMX
 ===============
 
-The latest stable release is the `DMX 5.0-beta-6 release <https://download.dmx.systems/dmx-5.0-beta-6.zip>`_.
+The latest stable release is the `DMX 5.0-beta-7 release <https://download.dmx.systems/dmx-5.0-beta-7.zip>`_.
 Previous versions of DMX are available for download on https://download.dmx.systems/.
 
 Save the according file to a location of your choice.
@@ -74,7 +74,7 @@ The DMX server is shut down.
 Removing DMX
 ============
 
-You can get rid of DMX by deleting the whole folder that got created when you unpacked the zip file, e.g. dmx-5.0-beta-6.
+You can get rid of DMX by deleting the whole folder that got created when you unpacked the zip file, e.g. dmx-5.0-beta-7.
 The Java Runtime Environment has to be uninstalled separately.
 
 .. _installation-macos:
@@ -97,7 +97,7 @@ Double-click the downloaded file and click through the installer.
 Downloading DMX
 ===============
 
-The latest stable release is the `DMX 5.0-beta-6 release <https://download.dmx.systems/dmx-5.0-beta-6.zip>`_. Previous versions of DMX are available for download on https://download.dmx.systems/.
+The latest stable release is the `DMX 5.0-beta-7 release <https://download.dmx.systems/dmx-5.0-beta-7.zip>`_. Previous versions of DMX are available for download on https://download.dmx.systems/.
 
 Save the according file to a location of your choice.
 Extract the ``.zip`` archive.
@@ -134,7 +134,7 @@ DMX is shut down.
 Removing DMX
 ============
 
-You can get rid of DMX by deleting the whole folder that got created when you unpacked the zip file, e.g. dmx-5.0-beta-6.
+You can get rid of DMX by deleting the whole folder that got created when you unpacked the zip file, e.g. dmx-5.0-beta-7.
 The Java Runtime Environment has to be uninstalled separately.
 
 .. _installation-linux:
@@ -146,7 +146,7 @@ Running DMX on Linux
 Installing Java
 ===============
 
-Use your package manager to install the Java 8 for your Linux distribution.
+Use your package manager to install Java 8 for your Linux distribution.
 
 For example, on Debian / Ubuntu, you would run the command
 
@@ -170,7 +170,7 @@ Running DMX from a zip archive
 Downloading DMX
 ---------------
 
-Currently we recommend you to download the `beta-6 release <https://download.dmx.systems/dmx-5.0-beta-6.zip>`_.
+Currently we recommend you to download the `beta-7 release <https://download.dmx.systems/dmx-5.0-beta-7.zip>`_.
 To try out the latest state of development you can download the `latest snapshot <https://download.dmx.systems/ci/dmx-latest.zip>`_ instead.
 All previous snapshots are available for download on https://download.dmx.systems/ci/.
 
@@ -181,19 +181,19 @@ Extract the zip archive.
 .. code:: bash
 
     ~ $ cd Downloads
-    # to get the beta-6 release:
-    ~/Downloads $ wget https://download.dmx.systems/dmx-5.0-beta-6.zip
-    ~/Downloads $ unzip dmx-5.0-beta-6.zip
+    # to get the beta-7 release:
+    ~/Downloads $ wget https://download.dmx.systems/dmx-5.0-beta-7.zip
+    ~/Downloads $ unzip dmx-5.0-beta-7.zip
 
 Starting DMX
 ------------
 
-Go into the newly created folder (in this example "dmx-5.0-beta-6") and run the start script ``./dmx-linux.sh``.
+Go into the newly created folder (in this example "dmx-5.0-beta-7") and run the start script ``./dmx-linux.sh``.
 
 .. code:: bash
 
-    ~/Downloads $ cd dmx-5.0-beta-6
-    ~/Downloads/cd dmx-5.0-beta-6 $ ./dmx-linux.sh
+    ~/Downloads $ cd dmx-5.0-beta-7
+    ~/Downloads/cd dmx-5.0-beta-7 $ ./dmx-linux.sh
 
 DMX tries to open the DMX web client automatically for you (at http://localhost:8080/systems.dmx.webclient/) using your default web browser. 
 
@@ -215,7 +215,7 @@ DMX is shut down.
 Removing DMX
 ------------
 
-You can get rid of DMX by deleting the whole folder that got created when you unpacked the zip file, e.g. dmx-5.0-beta-6.
+You can get rid of DMX by deleting the whole folder that got created when you unpacked the zip file, e.g. dmx-5.0-beta-7.
 The Java Runtime Environment has to be uninstalled separately.
 
 .. _installation-linux-apt:
