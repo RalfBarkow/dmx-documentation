@@ -1,6 +1,6 @@
-###########
-DMX Plugins
-###########
+####################
+Plugin Documentation
+####################
 
 The functionalities of DMX can be extended through plugins.
 Below you find an overview.
@@ -15,24 +15,24 @@ There is a variety of existing plugins.
 Some of them are Free Software (see the table below).
 Some freely available plugins can already be found in our `download section <https://download.dmx.systems/plugins/>`_, the others will follow soon.
 Their source code is available in our the `plugin repositories <https://git.dmx.systems/dmx-plugins>`_.
-The installation of plugins is explained in our :ref:`Admin Documentation <admin-plugin-installation>`.
+The installation of plugins is explained in our :ref:`Admin Guide <admin-plugin-installation>`.
 
 Some plugins are licensed under a proprietary license and can be purchased from us.
 
 ================================================================================================================================================================================  ===========================================================================================  ===========
 Plugin Name                                                                                                                                                                       Functionality                                                                                License
 ================================================================================================================================================================================  ===========================================================================================  ===========
-dmx-plugin-template (`source code <https://git.dmx.systems/dmx-plugins/dmx-plugin-template>`_)                                                                                    A starter project for writing a DMX plugin
-dmx-littlehelpers (`source code <https://git.dmx.systems/dmx-plugins/dmx-littlehelpers>`_)                                                                                        Utilities for DMX plugin developers                                                          GNU AGPLv3
-dmx-performance (`source code <https://git.dmx.systems/dmx-plugins/dmx-performance>`_)                                                                                            Creates a dummy topicmap with 150 topics/associations for performance testing
-dmx-tableview (`source code <https://git.dmx.systems/dmx-plugins/dmx-tableview>`_, `download <https://download.dmx.systems/plugins/dmx-tableview/>`_)                             A standalone table view for DMX based on VueJS and ElementUI                                 GNU AGPLv3
-dmx-tableview-command (`source code <https://git.dmx.systems/dmx-plugins/dmx-tableview-command>`_, `download <https://download.dmx.systems/plugins/dmx-tableview-command/>`_)     **Deprecated!**                                                                              GNU AGPLv3
-dmx-ldap (`source code <https://git.dmx.systems/dmx-plugins/dmx-ldap>`_, `download <https://download.dmx.systems/plugins/dmx-ldap/>`_)                                            LDAP Authentication for DMX                                                                  GNU AGPLv3             
-dmx-sendmail (`source code <https://git.dmx.systems/dmx-plugins/dmx-sendmail>`_)                                                                                                  A service to send mails using either SMTP or the HTTP Web API v3 of sendgrid.com             GNU AGPLv3
-dmx-geomaps (`source code <https://git.dmx.systems/dmx-plugins/dmx-geomaps>`_, `download <https://download.dmx.systems/plugins/dmx-geomaps/>`_)                                   OpenStreetMap based geo maps for the DMX platform                                            GNU AGPLv3
-dmx-geospatial (`source code <https://git.dmx.systems/dmx-plugins/dmx-geospatial>`_)                                                                                              Spatial database capabilities for DMX                                                        GNU AGPLv3
-dmx-thymeleaf (`source code <https://git.dmx.systems/dmx-plugins/dmx-thymeleaf>`_)                                                                                                A DMX plugin to enable server-side HTML generation based on the Thymeleaf template engine    GNU AGPLv3 
-dmx-tags (`source code <https://git.dmx.systems/dmx-plugins/dmx-tags>`_)                                                                                                          Tagging of topics or associations
+dmx-plugin-template (`source code <https://git.dmx.systems/dmx-plugins/dmx-plugin-template>`__)                                                                                   A starter project for writing a DMX plugin
+dmx-littlehelpers (`source code <https://git.dmx.systems/dmx-plugins/dmx-littlehelpers>`__)                                                                                       Utilities for DMX plugin developers                                                          GNU AGPLv3
+dmx-performance (`source code <https://git.dmx.systems/dmx-plugins/dmx-performance>`__)                                                                                           Creates a dummy topicmap with 150 topics/associations for performance testing
+dmx-tableview (`source code <https://git.dmx.systems/dmx-plugins/dmx-tableview>`__, `download <https://download.dmx.systems/plugins/dmx-tableview/>`__)                           A standalone table view for DMX based on VueJS and ElementUI                                 GNU AGPLv3
+dmx-tableview-command (`source code <https://git.dmx.systems/dmx-plugins/dmx-tableview-command>`__, `download <https://download.dmx.systems/plugins/dmx-tableview-command/>`__)   **Deprecated!**                                                                              GNU AGPLv3
+dmx-ldap (`source code <https://git.dmx.systems/dmx-plugins/dmx-ldap>`__, `download <https://download.dmx.systems/plugins/dmx-ldap/>`__)                                          LDAP Authentication for DMX                                                                  GNU AGPLv3
+dmx-sendmail (`source code <https://git.dmx.systems/dmx-plugins/dmx-sendmail>`__)                                                                                                 A service to send mails using either SMTP or the HTTP Web API v3 of sendgrid.com             GNU AGPLv3
+dmx-geomaps (`source code <https://git.dmx.systems/dmx-plugins/dmx-geomaps>`__, `download <https://download.dmx.systems/plugins/dmx-geomaps/>`__)                                 OpenStreetMap based geo maps for the DMX platform                                            GNU AGPLv3
+dmx-geospatial (`source code <https://git.dmx.systems/dmx-plugins/dmx-geospatial>`__)                                                                                             Spatial database capabilities for DMX                                                        GNU AGPLv3
+dmx-thymeleaf (`source code <https://git.dmx.systems/dmx-plugins/dmx-thymeleaf>`__)                                                                                               A DMX plugin to enable server-side HTML generation based on the Thymeleaf template engine    GNU AGPLv3
+dmx-tags (`source code <https://git.dmx.systems/dmx-plugins/dmx-tags>`__)                                                                                                         Tagging of topics or associations
 dmx-entity-mapper                                                                                                                                                                 Mapping database fields related to concepts across IT systems                                proprietary
 ================================================================================================================================================================================  ===========================================================================================  ===========
 
@@ -52,23 +52,24 @@ Edit a person or an organization and add an address.
 .. image:: _static/add-address.png
     :width: 800
 
-Open the search and create dialog.
+Open the :ref:`Search/Create dialog <user-the-search-create-dialog>`.
 Enter a name for the new Topicmap, e.g. "Our Geomap".
-In the topic type selector choose "Topicmap".
-Underneath it you can now choose the type of Topicmap you want to add.
-Select "Geomap" and press "Create".
+In the topic type selector scroll down to the "View" section, select "Geomap" and press "Create".
+Note that the choice of views depends on the plugins you have installed.
 
-.. image:: _static/add-geomap.jpg
+.. image:: _static/add-geomap.png
 
-Open the Topicmap selector in the upper toolbar and select your newly created geomap.
+Open the :ref:`Topicmap selector <user-the-topic-map-selector>` in the upper toolbar and select your newly created geomap.
 The map is displayed with all items you assigned an address to.
 
-.. image:: _static/topic-map-selection.jpg
+.. image:: _static/topic-map-selection.png
 
 If you click onto an item the in-map details show you what is there.
 
 .. image:: _static/display-map-item.jpg
     :width: 400
+
+.. note:: It is recommended to install the plugin before entering addresses! If you enter addresses while the Geomaps plugin is not installed, the addresses are not assigned any geo coordinates unless they are reedited and saved again while the plugin is installed.
 
 You return to the other Topicmaps via the :ref:`Topicmap Selector<user-the-topic-map-selector>`.
 

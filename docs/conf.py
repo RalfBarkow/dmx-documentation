@@ -20,8 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 project = u'DMX'
-copyright = u'2018 DMX Systems, https://dmx.berlin, Authors: Silke Meyer <silke@dmx.berlin>, Jörg Richter <jri@dmx.berlin>, Malte Reißig <malte.reissig@dmx.berlin>, License: Creative Commons Attribution-ShareAlike 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/)'
-author = "Silke Meyer <silke@dmx.berlin>, Joerg Richter <jri@dmx.berlin>, Malte Reissig <malte.reissig@dmx.berlin>"
+copyright = u'2021 DMX Systems, https://dmx.berlin, Authors: Jörg Richter <jri@dmx.berlin>, Silke Meyer <sme@dmx.berlin>, License: Creative Commons Attribution-ShareAlike 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/)'
+author = u'Jörg Richter <jri@dmx.berlin>, Silke Meyer <sme@dmx.berlin>'
 
 # The short X.Y version
 version = u''
@@ -42,6 +42,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
+    'sphinx_rtd_theme',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -61,7 +62,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -77,7 +78,8 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+# html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -90,13 +92,11 @@ html_theme = 'alabaster'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_static_path = ['_static']
-
 html_context = {
     'css_files': [
         '_static/theme_overrides.css',  # override wide tables in RTD theme
-        ],
-     }
+    ]
+}
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -112,7 +112,7 @@ html_context = {
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'DMX - The Context Machine'
+htmlhelp_basename = 'DMX'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -139,8 +139,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'dmx.tex', u'DMX - The Context Machine',
-     u'silke', 'manual'),
+    (master_doc, 'dmx.tex', u'DMX', author, 'manual'),
 ]
 
 
@@ -149,8 +148,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'dmx', u'DMX - The Context Machine',
-     [author], 1)
+    (master_doc, 'dmx', u'DMX', [author], 1)
 ]
 
 
@@ -160,9 +158,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'DMX', u'DMX - The Context Machine',
-     author, 'Silke Meyer', 'DMX is a platform for knowledge management and collaboration.',
-     'Miscellaneous'),
+    (master_doc, 'DMX', u'DMX', author, 'DMX', 'DMX is a knowledge building platform.', 'Miscellaneous'),
 ]
 
 
@@ -189,13 +185,11 @@ epub_exclude_files = ['search.html']
 # -- Options for intersphinx extension ---------------------------------------
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+# intersphinx_mapping = {'python': ('https://docs.python.org/3', None)}
 
 # -- Options for todo extension ----------------------------------------------
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
-import sphinx_rtd_theme
-html_theme = 'sphinx_rtd_theme'
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+#html_theme = 'sphinx_rtd_theme'

@@ -4,9 +4,9 @@ DMX User Guide
 
 .. _user-the-dmx-user-interface:
 
-**********************
-The DMX User Interface
-**********************
+**************
+User Interface
+**************
 
 .. _user-the-toolbar:
 
@@ -54,7 +54,7 @@ Content in a private Workspace cannot be read by anyone other than the Workspace
 Your choice in the Workspace Selector has direct influence on the available contents in the next menu, the *Topicmap Selector*.
 
 The Topicmap Selector
-----------------------
+---------------------
 
 .. figure:: _static/upper-toolbar-topicmap-selector.png
     :alt: Tool bar with highlighted topicmap selector
@@ -322,15 +322,30 @@ The "View" tab
 The fourth tab "View" gives you access to what is called a "View Configuration".
 With view configurations you can control the *visual appearance* of topics and associations of a specific type.
 So, editing a view configuration influences how items are rendered across all Topicmaps.
-At the moment, DMX allows you to perform the following customizations for topic and association types:
+At the moment, DMX allows you to perform the following customizations:
 
-* Topic Types: *Icon, Font Color, Background Color*
-* Association Types: *Association Color*
+- with Topic Types:
 
-If you need any further assistance for editing "View Configurations", the sections about :ref:`assigning icons to topic types<user-topic-type-icons>` and :ref:`assigning colors to association types<user-assigning-colors-to-association-types>` cover that.
+  * :ref:`assign an icon <user-topic-type-icons>` to be shown in all instances of the Topic Type,
+  * choose a font color for the display on Topicmaps,
+  * choose a background color for the boxes the instances are displayed in on Topicmaps
+  * add the Topic Type to or remove it from the Create Menu
 
-For the moment view configurations are only available on a per-type base (which is why the "View" tab is grayed out on any item which does not represent a *Type Definition*).
+- with Association Types:
+
+  * :ref:`assign an association color <user-topic-type-icons>` used in all instances of the Association Type
+
+- with Composition Definitions: 
+
+  * add or remove a drop-down menu with the available values
+  * specify if users can add more values on the fly
+  * specify if the field can be left empty
+
+For the moment view configurations are only available on a per-type base.
+This is why the "View" tab is grayed out on any item which does not represent a *Type Definition*.
 You can learn more about working with type definitions in the section about :ref:`Modeling<user-modeling>`.
+
+.. note:: Note that at the moment the View tab always offers all of the above settings, even if they are not applicable for a given type. This shall be improved in a future version of DMX.
 
 The Login Dialog
 ================
@@ -348,7 +363,7 @@ To use the user name and password from your organization select the "LDAP" metho
 
 .. image:: _static/ldap-login.png
 
-.. note:: You can learn how to install the LDAP plugin in our :ref:`Admin Documentation <admin-plugin-installation>`.
+.. note:: You can learn how to install the LDAP plugin in our :ref:`Admin Guide <admin-plugin-installation>`.
 
 .. _user-content-authoring:
 
@@ -557,24 +572,24 @@ You can confirm or cancel the deletion.
 
 .. _user-organizing-the-working-context:
 
-******************************
-Organizing the working context
-******************************
+**********************
+Working with Topicmaps
+**********************
 
-The DMX database contains your knowledge at large, your knowledge base.
-Everything you enter is saved in the database until you delete it.
+The semantic storage of DMX contains your knowledge at large, your knowledge base.
+Everything you enter is saved in the knowledge base until you delete it.
 What is important:
-Every item is saved in the knowledge base only *once*, even if you re-enter it or use it in many different contexts.
+Every item is saved in the knowledge base only *once*, even if you use it in many Workspaces or Topicmaps or even re-renter it. All occurences of an item display represent the one item in your semantic storage.
 
-To visualize your knowledge base in different situations you use Topicmaps.
-In each Topicmap different items from your knowledge base may be relevant and the rest stays hidden.
-Thus, every Topicmap represents *one* view, perspective, or working situation.
+To visualize and organize your knowledge base for working at different tasks you use Topicmaps.
+For each task, different items from your knowledge base may be relevant and the rest stay hidden.
+Thus, every Topicmap represents just *one* view onto your knowledge base and with that, a situation of your daily work.
 
-The following figure shows the relationship between content and its use in different working situations:
+The following figure shows the relationship between the knowledge base and using items of it in different working situations:
 
-In the lower half you see a representation of a DMX database.
+In the lower half you see a representation of the DMX semantic storage.
 It contains your complete knowledge graph made up of topics and associations.
-(Note that it also contains topic *types* and association *types* which are not visualized here for clarity.)
+(Note that it also contains the definitions of topic *types* and association *types* which are not visualized here for clarity.)
 
 In the upper half there are two different working contexts respectively Topicmaps.
 On each of them there is a selection of topics and associations revealed depending on what the Topicmap is about.
@@ -585,8 +600,8 @@ There can be much more content in the database than what you actually display bu
 
 .. _user-working-with-topicmaps:
 
-Working with Topicmaps
-======================
+Managing Topicmaps
+==================
 
 .. _user-creating-a-topicmap:
 
@@ -632,28 +647,28 @@ You can :ref:`hide <user-hiding-items>` the Topicmap topic from the map via the 
 
 .. _user-moving-things-around:
 
-Moving things around
-====================
-
 Note that you can drag the whole Topicmap into any direction.
 Just hold the left mouse button pressed somewhere on the Topicmap and drag.
 
-Moving topics
--------------
-
-Grab individual items with your mouse and drag them where you want them to be.
-
-Panning/zooming the Topicmap
-----------------------------
+Panning and Zooming
+-------------------
 
 Zooming in or out is done by scrolling up or down.
 Your cursor is the focus for panning.
 The :ref:`fit<user-the-fit-button>` and :ref:`reset zoom<user-the-reset-zoom-button>` buttons in the upper toolbar help you to readjust a Topicmap to your screen respectively to its original position.
 
+
+Placing items
+-------------
+
+You can grab individual or multiple items with your mouse and drag them where you want them to be. As topicmaps are also contents in the semantic storage, the geometrical layout of each map is persisted across sessions and users which facilitates the experience of so called "stable views".
+
+We think that, employing the concept of stable views leverages the power of humans visual and spatial memory at the same time.
+
 .. _user-hiding-items:
 
-Hiding things
-=============
+Hiding items
+------------
 
 .. note:: There is an important difference between hiding items and deleting them. If you delete items they are immediately removed from the database. If you hide them, they are just no longer visible on the Topicmap but you can bring them back by revealing them.
 
@@ -663,8 +678,8 @@ All previously revealed associations do so as well (see :ref:`Automatic Revelati
 
 .. _user-pinning-things:
 
-Pinning things
-==============
+Pinning items
+--------------
 
 You can "open" more than one item at the same time by pinning the in-map details.
 This is very useful for comparisons.
@@ -709,8 +724,8 @@ To hide several items at once select them by keeping the CTRL or SHIFT key press
 .. image:: _static/bulk-hide.png
     :width: 600
 
-Customizing the Look & Feel
-===========================
+View Configurations
+===================
 
 .. _user-topic-type-icons:
 
@@ -720,9 +735,11 @@ Assigning icons and colors to topic types
 You can assign icons from the Font Awesome collection to your topic types.
 Let's say you have a topic type "Publication" and you want all publications to have a book icon.
 
-- You are about to modify the general concept of all your publications, not an existing instance of it. Click onto the topic type "Publication", *not* onto an individual publication.
+You can do this through modifying the *View Configuration* of the type definition of a *Publication*. The so called *Topic Type* definition represents *not* onto an individual publication but the general concept of a Publication in your semantic storage.
+
+- Select any "Publication" item in your semantic storage and use the "Related" Panel to reveal and select the *Topic Type* named "Publication".
 - Open the Detail Panel by selecting "Details" from the context menu.
-- Go to the fourth tab called "View". Here you can view and edit the configuration of the topic type. Click "Edit".
+- Go to the fourth tab called "View". Here you can view and edit the *View Configuration* of a topic type. Click "Edit".
 - Click into the white field labeled "Icon".
 
 .. image:: _static/open-icon-selection.png
@@ -761,14 +778,11 @@ Choose a color for your association type and save it.
 
 .. _user-navigation:
 
-**********
-Navigation
-**********
+*********
+Searching
+*********
 
 .. _user-searching-the-database:
-
-Searching the database
-======================
 
 To search in DMX open the :ref:`Search/Create Dialog <user-the-search-create-dialog>` with a right-click on a Topicmap.
 Start typing what you are looking for.
@@ -782,8 +796,8 @@ Your actual content is displayed as well as topic types, Topicmaps, association 
 
 .. _user-advanced-search-filter-types:
 
-Advanced Search with the Type Filter
-------------------------------------
+\... \ using the Type Filter
+============================
 
 The :ref:`Search/Create Dialog <user-the-search-create-dialog>` has two checkboxes right under the search field.
 They narrow down your search results to certain topic types according to your filter.
@@ -819,8 +833,8 @@ This lets you find all persons with an address in Berlin.
 
 .. _user-advanced-search-lucene:
 
-Advanced Search with Lucene
----------------------------
+\... \ using Query Syntax
+=========================
 
 The search in DMX is run by the powerful Lucene search engine.
 You can run simple queries by just entering a search term.
@@ -894,18 +908,22 @@ If you escape the special character and you add a wild card to the end of the st
 
 .. note:: Advanced search along associations is not yet supported.
 
+**********
+Navigating
+**********
+
 .. _user-associative-navigation:
 
 Associative navigation
 ======================
 
-As DMX is made to work like a human brain you can navigate in an associative way.
-To navigate across topics along associations use the '*Related* command in the :ref:`context menu<user-the-context-menu>` of any item.
+As the DMX semantic storage implements an associative data model, associative navigation is native to DMX.
+To navigate across topics along associations use the *Related* command in the :ref:`context menu<user-the-context-menu>` of any item.
 This opens the "Related" tab of the :ref:`Detail Panel<user-the-detail-panel>`.
 
 .. image:: _static/related.png
 
-Here you can learn more about the features of the :ref:`"Related" tab<user-detail-panel-the-related-tab>`.
+Here you can learn more about all features the :ref:`"Related" tab<user-detail-panel-the-related-tab>` gives you to support you in associative navigation.
 
 Switching between Topicmaps
 ===========================
@@ -977,10 +995,10 @@ Collaboration and Sharing
 
 .. _user-creating-user-accounts:
 
-Creating user accounts
-======================
+User accounts
+=============
 
-.. note:: If you have existing users in an LDAP directory we recommend you to use our `LDAP plugin <https://download.dmx.systems/plugins/dmx-ldap/>`_. Learn how to install it in our :ref:`Admin Documentation<admin-plugin-installation>`.
+.. note:: If you have existing users in an LDAP directory we recommend you to use our `LDAP plugin <https://download.dmx.systems/plugins/dmx-ldap/>`_. Learn how to install it in our :ref:`Admin Guide<admin-plugin-installation>`.
 
 In DMX, you create user accounts just the way you create everything else, too:
 Enter a user name into the search field.
@@ -1009,10 +1027,11 @@ It is important that every user account is tied to the "System" Workspace (see b
 .. _user-changing-a-password:
 
 Changing a password
-===================
+-------------------
 
 Users can change their own password by searching for it and editing it.
-Open the :ref:`Search/Create Dialog <user-the-search-create-dialog>`, enter your user name and click it to reveal it on the Topicmap.
+Open the :ref:`Search/Create Dialog <user-the-search-create-dialog>`, enter your user name and search for the according user account topic.
+Reveal it on the Topicmap.
 
 .. image:: _static/user-account.png
 
@@ -1033,69 +1052,76 @@ Enter the clear text password - DMX will hash it for you when you press "save".
 
 The admin password can be changed in the same way.
 
-.. _user-introduction-to-workspaces-and-sharing-modes:
 
-Introduction to Workspaces and Sharing Modes
-============================================
+Workspaces
+==========
 
-In DMX, Workspaces are the highest level content is organized in.
-Workspaces can be compared to folders containing everything related to a working area, a project, or an area of life.
-**Each topic and association is tied to exactly *one* Workspace but you can display them in many Topicmaps.**
-A Workspace can have one or many members who have access to its content.
-**Read and write permissions are tied to Workspaces.**
-This feature makes Workspaces the basis of collaboration and the key to the configuration of access control:
+In DMX, Workspaces are the highest level of content organization.
+Each topic and association is tied to exactly *one* Workspace.
+A Workspace can have one or many members.
+All members share the same permissons on a workspaces content.
+Therefore workspaces provide different contexts for different domains of your work.
+Managing contents in workspaces is equivalent with managing who can read or write which contents in multi-user scenarios.
 
-DMX has five sharing modes:
-
-* **private**: In a private Workspace just the owner of the Workspace can read and write.
-* **confidential**: In a confidential Workspace the owner can read and write. Workspace members can read, but not change anything.
-* **collaborative**: A collaborative Workspace can be read and edited by the owner and by all Workspace members.
-* **public**: A public Workspace is world-readable. It can be read and edited by the owner and by all Workspace members. The default "DMX" Workspace is an example of a public Workspace.
-* **common**: For common Workspaces, you can configure the behaviour in the configuration file ``config.properties``. You can decide whether you want to allow reading and/or writing for non-logged in users. If configured accordingly, a common Workspace on a DMX instance connected to the internet can be readable and writable to *everyone* on the internet. See our :ref:`Admin Documentation<admin-request-filters>` for more details.
-
-Every Workspace has an owner, usually the creator, and optional members.
-When you are logged in you can access the different Workspaces via the :ref:`Workspace selector<user-the-workspace-selector>` in the upper left corner.
-Once you log out DMX will switch back to a public (world-readable) Workspace like the default Workspace called "DMX".
-All items that are publicly readable stay visible, the rest disappears from the view.
-In a public Workspace you are no longer able to edit but you still have a customizable view of the Topicmap, which means that you can move items and reveal other world-readable items.
-If you explicitly do not want or need any of the five sharing modes, you can disable them via :ref:`configuration<admin-workspace-sharing-modes>`.
+To switch in between workspaces use the Workspace selector.
 
 .. image:: _static/workspace-selector.png
 
-DMX comes with four default Workspaces with the following sharing modes:
+As topicmaps are tied to workspace, the list of available Topicmaps in the Topicmaps selector will change if you switch workspaces.
 
-* **DMX**: This Workspace is public. It is displayed publicly when people come to the site.
-* **Private Workspace**: This is the private Workspace of the respective logged in user. Only this user can see and and edit their items as the Workspace is private.
-* **Administration**: Only the admin or members can view and edit items in this Workspace. Unprivileged user accounts do not have this entry in the menu.
-* **System**: The System Workspace is readable by everyone who is logged in. It contains all user names that exist in this DMX installation. The user names are readable to all users. This is needed for sharing content with others as you will see below.
+.. _user-preinstalled-workspace:
+
+Pre-installed Workspaces
+------------------------
+
+DMX comes with the following Workspaces:
+
+* **DMX**: This workspace is public. It is displayed publicly when people come to the site.
+* **Private Workspace**: This is the private workspace of the respective logged in user. Only this user can see and and edit items as the Workspace is private.
+* **Administration**: Only the admin or members of this workspace can view and edit items in this workspace. Unprivileged user accounts do not see this workspace.
+* **System**: The System workspace is readable by everyone who is logged in. It contains all user names that exist in this DMX installation. The user names are readable to all users. This is needed for sharing content with others as you will see below.
 
 .. image:: _static/system-workspace.png
 
-.. _user-sharing-a-workspace:
+.. _user-creating-workspaces:
 
-Sharing a Workspace
-===================
+Creating a collaborative Workspace
+----------------------------------
 
-Here is how creating a shared Workspace works:
+A collaborative workspace allows you to share write permission on the contents of the workspace with other users.
 
-* Log in as an unprivileged user and go to your private Workspace where you can edit.
-* Open the search field and **create a Workspace**. Make it a collaborative Workspace to give others write permission.
+To create a collborative workspace open the Search & Create dialog in a workspace you have write permission.
+
+* Type in a name for the new workspace, select topic type *Workspace*.
+* Set the Sharing Mode of the workspace to *Collaborative*. 
 
 .. image:: _static/workspace-creation.png
 
-* The new Workspace automatically opens. Click onto the blue information icon next to the Workspace selector to reveal the Workspace topic itself on the Topicmap.
-* To add members to the Workspace you can just search for their user names and click them to reveal them on the map. As mentioned above, all user names are visible to all other logged in users. In DMX, membership is tied to user names.
-* If you don't know their user names you search for the topic type "Username" and navigate its "Related" tab to see the existing user names in the Detail Panel. Reveal those you want to give access.
-* Now that you have the Workspace itself and a user name on your Topicmap you can just **create an association between the user name and the Workspace**.
-* Next you have to qualify this association as a membership: Edit the association.
+The new workspace is automatically selected. Click onto the blue information icon next to the Workspace selector to reveal the Workspace topic itself on the Topicmap. Now you can add members to your collaborative workspace.
 
-.. image:: _static/edit-ws-assoc.png
+Workspace Memberships
+=====================
 
-* In the Detail Panel you can now select the association type "Membership". You are done!
+Members of a *Workspace* are the workspace *owner* and all users with a *Membership* association to it.
+Workspaces are the highest level for content organization. All members of a workspace share the same permissions on its contents.
 
-.. image:: _static/edit-ws-assoc2.png
+To inspect the existing members of a workspace, click onto the blue information icon next to the Workspace selector.
+Using the "info" command will reveal the Workspace on the Topicmap.
+In the "Related" tab of the workspace you can see a list of all usernames associated via a *Membership* assocation.
 
-* Here are the details of the Workspace membership association.
+In the "Info" tab of the workspace you see also the *SharingMode* set for this workspace (see :ref:`Sharing Modes <user-introduction-to-workspaces-and-sharing-modes>`.
+
+.. image:: _static/system-workspace.png
+
+.. _user-managing-memberships:
+
+Managing Memberships
+--------------------
+
+* To add members to the Workspace search for the usernames you want to invite and reveal them on the map. As mentioned above, all usernames are visible to all other logged in users. In DMX, membership is tied to usernames.
+* If you don't know their usernames you search for the topic type "Username" and navigate its "Related" tab to see the existing user names in the Detail Panel. Reveal those you want to give access.
+* Now that you have the Workspace itself and a user name on your Topicmap you can just **create an association between the username and the Workspace**.
+* This association is automatically turned into an association of type *Membership*:
 
 .. image:: _static/view-ws-assoc.png
 
@@ -1103,12 +1129,35 @@ Here is how creating a shared Workspace works:
 
 .. note:: You can create membership associations to every Workspace that you have write permission in.
 
+.. _user-introduction-to-workspaces-and-sharing-modes:
+
+Workspace Sharing Modes
+=======================
+
+In DMX, which user can **use** items (requires **read** permission) or **edit** items (requires **write** permission) is determined by the *Sharing Mode* of the *Workspace* the item resides in. Therefore, each topic and association is related to exactly *one* Workspace at a time.
+
+This makes *Workspaces* the core concept for sharing items and the key to fine-grained configuration of access control. To make this easier for users, DMX comes with five sharing modes and users are able to move items in between workspaces. The rule therefore is, each Workspace is of exaxctly one *Sharing Mode*. The creator of a workspace can change the Sharing Mode of a workspace at any time.
+
+.. note:: If you have **read** accesss to an item, you can reveal and use it in any Topicmap of any Workspace.
+
+DMX provides five *Sharing Modes* to choose from when creating a *Workspace*. 
+
+* **Private**: In a *Private* Workspace just the owner of the Workspace can read and write its items.
+* **Confidential**: In a *Confidential* Workspace only the owner can read and write items. Workspace members can read, but not edit contents.
+* **Collaborative**: A *Collaborative* Workspace can be read and edited by the owner and by all Workspace members only.
+* **Public**: A *Public* Workspace is world-readable and, when your DMX is connected to the internet, is the same as publishing information on a website. All items in it can be read by the public, but only edited by the owner of the workspace and all its members. The default "DMX" Workspace is an example of a public Workspace.
+* **Common**: In *Common* Workspaces, even non-logged in users can write contents. You can decide whether you want to allow reading and/or writing for non-logged in users. If configured accordingly, a Common Workspace on a DMX instance connected to the internet can be readable and writable to *everyone* on the internet. See our :ref:`Admin Documentation<admin-request-filters>` for more details.
+
+If you explicitly do not want or need any of the five sharing modes, you can disable them via :ref:`configuration<admin-workspace-sharing-modes>`.
+
+.. image:: _static/workspace-selector.png
+
 .. _user-moving-objects-to-a-different-workspace:
 
-Moving objects to a different Workspace
-=======================================
+Moving objects in between Workspaces
+------------------------------------
 
-It is possible to assign existing objects to a different Workspace.
+As any item can only reside in *one* workspace at a time, it is possible to assign items to a different Workspace.
 For this, you must have write permission on both the selected object and the target Workspace.
 
 An example use case: You have a contact, a "Person" object, in your private Workspace that you want to share with some other user.
@@ -1121,28 +1170,34 @@ You can now select the target Workspace from the drop-down menu and hit "Save".
 
 .. note:: This only works for individual selected objects. Bulk operations are not yet supported.
 
+Read-only Sessions
+------------------
+
+When you are logged in you can access the different Workspaces via the :ref:`Workspace selector<user-the-workspace-selector>` in the upper left corner.
+Once you log out DMX you will only be able to read contents from workspaces with sharing mode Public or Common.
+Items that are publicly readable stay visible in a topicmap, the rest disappears.
+In a public Workspace you are no longer able to edit when logged out, but you can still control the viewport of the Topicmap.
+This is to support a so called "kiosk mode" in which users can search, explore and navigate along all world-readable items in your knowledge base.
+
 .. _user-modeling:
 
-*********
+********
 Modeling
-*********
+********
 
-A data model is an abstract model that defines all elements needed to represent items, their properties and their relationships.
-DMX enables users to create their own data models.
+.. attention::
+
+    The "Modeling" chaper is flawed. See `#29 <https://git.dmx.systems/dmx-platform/dmx-documentation/-/issues/29>`_ and `#30 <https://git.dmx.systems/dmx-platform/dmx-documentation/-/issues/30>`_.
+
+    If you have questions, please use the `DMX Forum <https://forum.dmx.systems>`_.
 
 .. _user-introduction-to-data-modeling:
 
 Introduction to Data Modeling
-==============================
+=============================
 
-DMX is built upon the so-called Associative Model of Data.
-It uses a suitable database model which can be considered opposed to the widely used Relational Database Management Systems.
-
-If you want to dive deeper into this concept, we recommend the following sources:
-
-* Joseph V. Homan, Paul J. Kovacs: `A Comparison Of The Relational Database Model And The Associative Database Model <http://iacis.org/iis/2009/P2009_1301.pdf>`_, in: Issues in Information Systems, Volume X, No. 1, 2009 (6 page article)
-* Simon Williams: `The Associative Model Of Data <https://link.springer.com/content/pdf/10.1057/palgrave.jdm.3240049.pdf>`_, in: Journal of Database Marketing, Volume 8, 4, 2001 (24 page article)
-* Simon Williams: The `Associative Model Of Data <http://www.sentences.com/docs/other_docs/AMD.pdf>`_, Lazy Software, 2nd edition, 2002 (book, 284 pages)
+A data model is an abstract model that defines all elements needed to represent items, their properties and their relationships.
+DMX enables users to create their own data models.
 
 It depends on your use case how you build your data model.
 In most cases, there is more than one possible way of achieving what you need.
@@ -1214,7 +1269,7 @@ There are six different data types in DMX.
 Four of them are so-called **simple** types:
 
 * **text:** This is the default data type and it contains a text string.
-* **number:** An example is "year".
+* **number:** An example is "1984".
 * **boolean:** yes/no resp. true/false
 * **html:** HTML
 
@@ -1234,7 +1289,7 @@ By doing so you define the parent-child relations, the cardinality of properties
 This kind of association type is called a composition definition.
 
 For associations there is just *one* composite data type which is obviously called composite.
-For topic types DMX has both composite types: **value** and **entity**.
+For topic types DMX has two composite types: **value** and **entity**.
 
 These terms exist to clarify what you are referring to when changes occur.
 Think of real-world contexts and how people are able to understand what changed.
@@ -1242,7 +1297,7 @@ If a person has a new address this could mean they moved, but it could also mean
 You can model these two different case by using the data types "entity" and "value".
 
 The composite type "entity"
------------------------------
+---------------------------
 
 In DMX, entity is used when you want to refer to the same thing as before even if something changes.
 If an address changes because the street is renamed you would still mean the same house at the same geolocation.
